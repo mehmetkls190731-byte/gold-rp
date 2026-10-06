@@ -1,0 +1,2510 @@
+index.html<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GOLD RP | Emergency Hamburg Roleplay</title>
+
+<meta name="description" content="GOLD RP - Emergency Hamburg Roleplay">
+
+<style>
+:root{
+    --gold:#d4a72c;
+    --gold2:#f4c84b;
+    --gold3:#ffe39a;
+    --cream:#fffaf0;
+    --white:#ffffff;
+    --dark:#17130b;
+    --brown:#4a3815;
+    --gray:#746d60;
+    --border:#ead9a7;
+    --shadow:0 12px 35px rgba(94,68,12,.12);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(circle at top right,#fff1b8 0,transparent 28%),
+        linear-gradient(180deg,#fffdf7,#fff7df);
+    color:var(--dark);
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,250,240,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:900;
+    font-size:23px;
+}
+
+.logo-icon{
+    width:43px;
+    height:43px;
+    border-radius:13px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));
+    color:#fff;
+    box-shadow:0 8px 20px rgba(212,167,44,.25);
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav-links a{
+    color:#5b503d;
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.btn{
+    border:0;
+    padding:11px 17px;
+    border-radius:12px;
+    font-weight:800;
+    transition:.2s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-gold{
+    color:#fff;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));
+    box-shadow:0 8px 20px rgba(212,167,44,.2);
+}
+
+.btn-light{
+    background:#fff;
+    color:var(--brown);
+    border:1px solid var(--border);
+}
+
+/* HERO */
+
+.hero{
+    padding:90px 0 70px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:45px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border-radius:999px;
+    background:#fff5d3;
+    border:1px solid #efd78d;
+    color:#806116;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(45px,7vw,82px);
+    line-height:.95;
+    letter-spacing:-4px;
+    margin-bottom:24px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    color:var(--gray);
+    line-height:1.8;
+    font-size:17px;
+    max-width:650px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:30px;
+}
+
+.hero-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:30px;
+    padding:32px;
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-card::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:#ffe69b;
+    border-radius:50%;
+    right:-70px;
+    top:-70px;
+}
+
+.hero-emblem{
+    width:130px;
+    height:130px;
+    border-radius:35px;
+    margin:auto;
+    display:grid;
+    place-items:center;
+    font-size:60px;
+    background:linear-gradient(135deg,#ffe17d,#c99513);
+    color:#fff;
+    box-shadow:0 20px 40px rgba(175,127,10,.22);
+    position:relative;
+}
+
+.hero-card h3{
+    text-align:center;
+    margin-top:25px;
+    font-size:25px;
+}
+
+.hero-card p{
+    text-align:center;
+    margin-top:8px;
+    font-size:14px;
+}
+
+/* QUICK */
+
+.quick{
+    padding:0 0 35px;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.quick-item{
+    background:#fff;
+    border:1px solid var(--border);
+    padding:21px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(94,68,12,.06);
+}
+
+.quick-item strong{
+    display:block;
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.quick-item span{
+    color:var(--gray);
+    font-size:13px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 0;
+}
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.section-head h2{
+    font-size:38px;
+    letter-spacing:-1px;
+}
+
+.section-head p{
+    color:var(--gray);
+    max-width:600px;
+    line-height:1.6;
+}
+
+.gold-line{
+    width:65px;
+    height:5px;
+    border-radius:20px;
+    background:linear-gradient(90deg,var(--gold),var(--gold2));
+    margin:12px 0 20px;
+}
+
+/* NEWS */
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.card-image{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    background:linear-gradient(135deg,#f5d36b,#fff1bd);
+}
+
+.card-content{
+    padding:22px;
+}
+
+.tag{
+    display:inline-block;
+    background:#fff3c9;
+    color:#866516;
+    border-radius:999px;
+    padding:6px 10px;
+    font-size:11px;
+    font-weight:900;
+    margin-bottom:12px;
+}
+
+.card h3{
+    margin-bottom:9px;
+    font-size:20px;
+}
+
+.card p{
+    color:var(--gray);
+    line-height:1.65;
+    font-size:14px;
+}
+
+/* STAFF */
+
+.staff-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.staff{
+    text-align:center;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:25px 18px;
+    box-shadow:var(--shadow);
+}
+
+.avatar{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+    border:4px solid #f4d77b;
+    background:#fff4cb;
+}
+
+.staff h3{
+    font-size:18px;
+}
+
+.staff p{
+    color:var(--gold);
+    font-size:13px;
+    font-weight:800;
+    margin-top:5px;
+}
+
+/* GANGS */
+
+.gang-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.gang{
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
+    min-height:390px;
+    background:#17130b;
+    color:#fff;
+    border:1px solid #c99b26;
+}
+
+.gang img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    opacity:.88;
+}
+
+.gang-body{
+    padding:23px;
+}
+
+.gang h3{
+    color:#f5cc4c;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.gang p{
+    color:#eee;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.gang-btn{
+    margin-top:18px;
+}
+
+/* JOIN */
+
+.join-box{
+    background:linear-gradient(135deg,#fff0b5,#fffdf5);
+    border:1px solid #e9cf73;
+    border-radius:28px;
+    padding:40px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:25px;
+    align-items:center;
+}
+
+.join-box h3{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.join-box p{
+    color:#6f634b;
+    line-height:1.7;
+}
+
+/* JUSTICE */
+
+.justice{
+    background:#fff;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.justice-top{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.ministry{
+    padding:35px;
+    border-radius:25px;
+    background:linear-gradient(135deg,#fff1b8,#fff);
+    border:1px solid var(--border);
+}
+
+.ministry h3{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.ministry p{
+    color:var(--gray);
+    line-height:1.7;
+}
+
+.justice-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+/* EVENTS */
+
+.event-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.event{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:var(--shadow);
+}
+
+.event-date{
+    color:var(--gold);
+    font-weight:900;
+    font-size:13px;
+    margin-bottom:9px;
+}
+
+/* APPLICATION */
+
+.apply-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.apply{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:24px;
+    text-align:center;
+}
+
+.apply-icon{
+    width:52px;
+    height:52px;
+    border-radius:15px;
+    display:grid;
+    place-items:center;
+    margin:0 auto 15px;
+    background:#fff1bd;
+    font-size:24px;
+}
+
+.apply h3{
+    margin-bottom:8px;
+}
+
+.apply p{
+    color:var(--gray);
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* SOCIAL */
+
+.social-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.social{
+    padding:28px;
+    border-radius:22px;
+    background:#fff;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+}
+
+.social strong{
+    display:block;
+    font-size:21px;
+    margin-bottom:7px;
+}
+
+.social span{
+    color:var(--gray);
+}
+
+/* FAQ */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:18px 20px;
+    margin-bottom:12px;
+}
+
+summary{
+    font-weight:800;
+    cursor:pointer;
+}
+
+details p{
+    color:var(--gray);
+    line-height:1.7;
+    margin-top:13px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#211a0d;
+    color:#fff;
+    padding:55px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:35px;
+}
+
+footer h3{
+    margin-bottom:13px;
+    color:#f5ce53;
+}
+
+footer p,
+footer a{
+    color:#d8d0bd;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.footer-bottom{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.12);
+    text-align:center;
+    color:#aaa;
+    font-size:13px;
+}
+
+/* ADMIN */
+
+.admin-panel{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    background:rgba(25,19,7,.55);
+    backdrop-filter:blur(8px);
+    padding:30px;
+    overflow:auto;
+}
+
+.admin-box{
+    max-width:900px;
+    margin:30px auto;
+    background:#fffdf7;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 30px 90px rgba(0,0,0,.25);
+}
+
+.admin-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.admin-tabs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:20px;
+}
+
+.admin-tab{
+    border:1px solid var(--border);
+    background:#fff;
+    padding:10px 13px;
+    border-radius:10px;
+    font-weight:700;
+}
+
+.admin-content{
+    display:none;
+}
+
+.admin-content.active{
+    display:block;
+}
+
+.input{
+    width:100%;
+    padding:13px 14px;
+    border-radius:11px;
+    border:1px solid #dfd2b0;
+    outline:none;
+    margin-bottom:12px;
+    font-family:inherit;
+}
+
+textarea.input{
+    min-height:120px;
+    resize:vertical;
+}
+
+.admin-note{
+    background:#fff4c8;
+    border:1px solid #efd47b;
+    padding:14px;
+    border-radius:12px;
+    color:#6f5817;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.admin-list{
+    margin-top:20px;
+}
+
+.admin-row{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    align-items:center;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:14px;
+    margin-bottom:8px;
+}
+
+/* MEMBER */
+
+.member-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:2500;
+    background:rgba(20,15,5,.45);
+    backdrop-filter:blur(7px);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal-box{
+    background:#fff;
+    border-radius:23px;
+    padding:30px;
+    width:min(450px,100%);
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+}
+
+.modal-box h2{
+    margin-bottom:10px;
+}
+
+.modal-box p{
+    color:var(--gray);
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* SEARCH */
+
+.search{
+    display:flex;
+    gap:10px;
+}
+
+.search input{
+    flex:1;
+    padding:12px 14px;
+    border:1px solid var(--border);
+    border-radius:12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+    .nav-links{
+        display:none;
+    }
+
+    .hero-grid,
+    .justice-top,
+    .join-box{
+        grid-template-columns:1fr;
+    }
+
+    .quick-grid,
+    .staff-grid,
+    .justice-grid,
+    .apply-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .news-grid,
+    .gang-grid,
+    .event-grid,
+    .social-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+    .hero{
+        padding:60px 0 40px;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .quick-grid,
+    .staff-grid,
+    .justice-grid,
+    .apply-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 0;
+    }
+
+    .section-head{
+        display:block;
+    }
+
+    .section-head h2{
+        font-size:30px;
+    }
+
+    .admin-panel{
+        padding:10px;
+    }
+
+    .admin-box{
+        margin:5px auto;
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+<div class="container nav">
+
+<a href="#" class="logo">
+<div class="logo-icon">G</div>
+<div>GOLD <span>RP</span></div>
+</a>
+
+<nav class="nav-links">
+<a href="#haberler">Haberler</a>
+<a href="#ceteler">Çeteler</a>
+<a href="#adalet">Adalet</a>
+<a href="#ekip">Ekip</a>
+<a href="#etkinlikler">Etkinlikler</a>
+<a href="#sss">SSS</a>
+</nav>
+
+<div class="nav-buttons">
+<button class="btn btn-light" onclick="openMembers()">Üyeler</button>
+<button class="btn btn-gold" onclick="openAdmin()">Admin</button>
+</div>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">🟡 EMERGENCY HAMBURG • GOLD RP</div>
+
+<h1>
+Şehrin<br>
+<span>Altın</span> Çağı
+</h1>
+
+<div class="gold-line"></div>
+
+<p>
+GOLD RP, Emergency Hamburg üzerinde gerçekçi,
+düzenli ve kaliteli roleplay deneyimi sunmak için
+oluşturulmuş bir roleplay topluluğudur.
+</p>
+
+<div class="hero-buttons">
+
+<a class="btn btn-gold"
+href="https://discord.gg/qC2tsYEKt"
+target="_blank">
+💬 Discord'a Katıl
+</a>
+
+<a class="btn btn-light"
+href="https://www.roblox.com/games/7711635737/Emergency-Hamburg"
+target="_blank">
+🎮 Oyuna Git
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="hero-emblem">👑</div>
+
+<h3>GOLD RP</h3>
+
+<p>
+Kaliteli Roleplay • Adalet • Ekip Çalışması
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- QUICK -->
+
+<section class="quick">
+<div class="container quick-grid">
+
+<div class="quick-item">
+<strong>📢 Duyurular</strong>
+<span>Sunucudaki önemli gelişmeleri takip et.</span>
+</div>
+
+<div class="quick-item">
+<strong>📰 Şehir Haberleri</strong>
+<span>Şehirde yaşanan son gelişmeleri öğren.</span>
+</div>
+
+<div class="quick-item">
+<strong>⚖️ Adalet</strong>
+<span>GOLD RP Adalet Bakanlığı.</span>
+</div>
+
+<div class="quick-item">
+<strong>🕶️ Çeteler</strong>
+<span>Şehirdeki aktif çeteleri keşfet.</span>
+</div>
+
+</div>
+</section>
+
+
+<!-- HABERLER -->
+
+<section id="haberler">
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>Şehir Haberleri</h2>
+<div class="gold-line"></div>
+</div>
+
+<p>
+GOLD RP şehrindeki önemli olaylar, duyurular ve gelişmeler.
+</p>
+</div>
+
+<div class="news-grid" id="newsContainer">
+
+<div class="card">
+<img class="card-image"
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+<span class="tag">GOLD RP</span>
+<h3>Yeni Dönem Başlıyor</h3>
+<p>
+GOLD RP şehrinde yeni roleplay dönemi başladı.
+Sunucumuza katılarak şehirde kendi hikayeni oluşturabilirsin.
+</p>
+</div>
+</div>
+
+
+<div class="card">
+<img class="card-image"
+src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+<span class="tag">DUYURU</span>
+<h3>Topluluk Duyuruları</h3>
+<p>
+Yeni etkinlikler, ekip alımları ve önemli gelişmeler
+Discord sunucumuz üzerinden paylaşılmaktadır.
+</p>
+</div>
+</div>
+
+
+<div class="card">
+<img class="card-image"
+src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+<span class="tag">ETKİNLİK</span>
+<h3>Yakında Yeni Etkinlikler</h3>
+<p>
+Şehrimizde düzenlenecek roleplay etkinliklerini kaçırmamak
+için Discord sunucumuzu takip et.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- EKİP -->
+
+<section id="ekip">
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>Yetkili Kadrosu</h2>
+<div class="gold-line"></div>
+</div>
+
+<p>
+GOLD RP'nin yönetim ve yetkili ekibi.
+</p>
+</div>
+
+<div class="staff-grid" id="staffContainer">
+
+<div class="staff">
+<img class="avatar"
+src="https://i.pravatar.cc/200?img=12">
+<h3>Mehmet</h3>
+<p>Founder / Owner</p>
+</div>
+
+<div class="staff">
+<img class="avatar"
+src="https://i.pravatar.cc/200?img=33">
+<h3>Yetkili</h3>
+<p>Administrator</p>
+</div>
+
+<div class="staff">
+<img class="avatar"
+src="https://i.pravatar.cc/200?img=14">
+<h3>Yetkili</h3>
+<p>Moderator</p>
+</div>
+
+<div class="staff">
+<img class="avatar"
+src="https://i.pravatar.cc/200?img=15">
+<h3>Yetkili</h3>
+<p>Support</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ÇETELER -->
+
+<section id="ceteler">
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>Çeteler</h2>
+<div class="gold-line"></div>
+</div>
+
+<p>
+GOLD RP şehrindeki çete oluşumları.
+</p>
+</div>
+
+<div class="gang-grid">
+
+<div class="gang">
+
+<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=80">
+
+<div class="gang-body">
+<h3>RAGE ÇETESİ</h3>
+
+<p>
+Şehrin en bilinen oluşumlarından biri.
+Kendi ekibini kur, şehrin yeraltı dünyasında yerini al.
+</p>
+
+<a class="btn btn-gold gang-btn"
+href="https://discord.gg/qC2tsYEKt"
+target="_blank">
+Çeteye Katıl
+</a>
+</div>
+
+</div>
+
+
+<div class="gang">
+
+<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80">
+
+<div class="gang-body">
+<h3>RIYA ÇETESİ</h3>
+
+<p>
+Şehirde aktif olan diğer büyük oluşumlardan biri.
+Ekibe katılmak için Discord üzerinden başvuru yapabilirsin.
+</p>
+
+<a class="btn btn-gold gang-btn"
+href="https://discord.gg/qC2tsYEKt"
+target="_blank">
+Çeteye Katıl
+</a>
+</div>
+
+</div>
+
+
+<div class="gang">
+
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=80">
+
+<div class="gang-body">
+<h3>BLOOD FAMILY</h3>
+
+<p>
+Şehrin dikkat çeken gruplarından biri.
+Katılım şartlarını Discord üzerinden öğrenebilirsin.
+</p>
+
+<a class="btn btn-gold gang-btn"
+href="https://discord.gg/qC2tsYEKt"
+target="_blank">
+Çeteye Katıl
+</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ÇETE KATILIM -->
+
+<section>
+<div class="container">
+
+<div class="join-box">
+
+<div>
+<h3>🕶️ Çetelere Nasıl Katılırım?</h3>
+
+<p>
+GOLD RP içerisindeki çete oluşumlarına katılmak için
+Discord sunucumuz üzerinden ilgili çete yetkilileriyle
+iletişime geçebilirsiniz. Başvurular ve katılım süreçleri
+Discord üzerinden gerçekleştirilmektedir.
+</p>
+</div>
+
+<a class="btn btn-gold"
+href="https://discord.gg/qC2tsYEKt"
+target="_blank">
+Discord'dan Katıl
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ADALET -->
+
+<section id="adalet" class="justice">
+
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>⚖️ GOLD RP ADALET BAKANLIĞI</h2>
+<div class="gold-line"></div>
+</div>
+
+<p>
+Şehrin adalet sisteminden sorumlu ekip.
+</p>
+</div>
+
+
+<div class="justice-top">
+
+<div class="ministry">
+
+<h3>GOLD RP ADALET BAKANLIĞI</h3>
+
+<p>
+Hakimler, hukuk ekibi ve adalet personeli tarafından
+şehir içerisindeki hukuki süreçlerin düzenli şekilde
+yürütülmesini sağlar.
+</p>
+
+<br>
+
+<a class="btn btn-gold"
+href="https://discord.gg/qC2tsYEKt"
+target="_blank">
+⚖️ Adalet Ekibine Başvur
+</a>
+
+</div>
+
+
+<div class="ministry">
+
+<h3>Adalet Ekibine Nasıl Katılırım?</h3>
+
+<p>
+Hakim veya adalet ekibinde görev almak isteyen kişiler
+Discord sunucumuz üzerinden başvuru yapabilir.
+Başvurular değerlendirilerek uygun görülen kişiler
+ekibe dahil edilir.
+</p>
+
+<br>
+
+<a class="btn btn-light"
+href="https://discord.gg/qC2tsYEKt"
+target="_blank">
+Discord Üzerinden Başvur
+</a>
+
+</div>
+
+</div>
+
+
+<div class="justice-grid" id="justiceContainer">
+
+<div class="staff">
+<img class="avatar"
+src="https://i.pravatar.cc/200?img=11">
+<h3>Adalet Yetkilisi</h3>
+<p>BAŞ HAKİM</p>
+</div>
+
+<div class="staff">
+<img class="avatar"
+src="https://i.pravatar.cc/200?img=16">
+<h3>Adalet Yetkilisi</h3>
+<p>HAKİM</p>
+</div>
+
+<div class="staff">
+<img class="avatar"
+src="https://i.pravatar.cc/200?img=20">
+<h3>Adalet Yetkilisi</h3>
+<p>HAKİM</p>
+</div>
+
+<div class="staff">
+<img class="avatar"
+src="https://i.pravatar.cc/200?img=25">
+<h3>Adalet Yetkilisi</h3>
+<p>SAVCI</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- BAŞVURULAR -->
+
+<section>
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>Başvurular</h2>
+<div class="gold-line"></div>
+</div>
+
+<p>
+GOLD RP bünyesinde görev almak için başvuru yap.
+</p>
+</div>
+
+<div class="apply-grid">
+
+<div class="apply">
+<div class="apply-icon">👮</div>
+<h3>Polis</h3>
+<p>
+Polis teşkilatına katılmak için Discord üzerinden başvuru yap.
+</p>
+</div>
+
+<div class="apply">
+<div class="apply-icon">🚑</div>
+<h3>EMS</h3>
+<p>
+Acil sağlık ekibine katılmak için Discord üzerinden başvur.
+</p>
+</div>
+
+<div class="apply">
+<div class="apply-icon">⚖️</div>
+<h3>Adalet</h3>
+<p>
+Hakim ve hukuk ekibine katılmak için başvuru yap.
+</p>
+</div>
+
+<div class="apply">
+<div class="apply-icon">🛡️</div>
+<h3>Yetkili</h3>
+<p>
+GOLD RP yönetim ekibine katılmak için başvur.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ETKİNLİKLER -->
+
+<section id="etkinlikler">
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>Etkinlikler</h2>
+<div class="gold-line"></div>
+</div>
+
+<p>
+GOLD RP'de düzenlenen ve düzenlenecek etkinlikler.
+</p>
+</div>
+
+<div class="event-grid">
+
+<div class="event">
+<div class="event-date">📅 YAKINDA</div>
+<h3>Şehir Operasyonu</h3>
+<p>
+Detaylar Discord sunucumuz üzerinden açıklanacaktır.
+</p>
+</div>
+
+<div class="event">
+<div class="event-date">📅 YAKINDA</div>
+<h3>Çete Etkinliği</h3>
+<p>
+Çetelerin katılabileceği özel roleplay etkinliği.
+</p>
+</div>
+
+<div class="event">
+<div class="event-date">📅 YAKINDA</div>
+<h3>Topluluk Etkinliği</h3>
+<p>
+Tüm GOLD RP oyuncularının katılabileceği etkinlik.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- SOSYAL -->
+
+<section>
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>Sosyal Medya</h2>
+<div class="gold-line"></div>
+</div>
+
+<p>
+GOLD RP'yi sosyal medya üzerinden takip et.
+</p>
+</div>
+
+<div class="social-grid">
+
+<a class="social"
+href="https://www.instagram.com/eh.goldrp/"
+target="_blank">
+
+<strong>📸 Instagram</strong>
+<span>@eh.goldrp</span>
+
+</a>
+
+
+<a class="social"
+href="https://discord.gg/qC2tsYEKt"
+target="_blank">
+
+<strong>💬 Discord</strong>
+<span>GOLD RP Discord Sunucusu</span>
+
+</a>
+
+
+<a class="social"
+href="https://www.roblox.com/games/7711635737/Emergency-Hamburg"
+target="_blank">
+
+<strong>🎮 Roblox</strong>
+<span>Emergency Hamburg</span>
+
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- SSS -->
+
+<section id="sss">
+<div class="container">
+
+<div class="section-head">
+<div>
+<h2>Sık Sorulan Sorular</h2>
+<div class="gold-line"></div>
+</div>
+</div>
+
+<div class="faq">
+
+<details>
+<summary>GOLD RP'ye nasıl katılabilirim?</summary>
+<p>
+Discord sunucumuza katılarak topluluk hakkında bilgi
+alabilir ve roleplaylere katılabilirsin.
+</p>
+</details>
+
+<details>
+<summary>Çetelere nasıl katılabilirim?</summary>
+<p>
+Çete katılımları Discord üzerinden gerçekleştirilmektedir.
+</p>
+</details>
+
+<details>
+<summary>Adalet ekibine nasıl katılabilirim?</summary>
+<p>
+Adalet ekibi başvuruları Discord üzerinden alınmaktadır.
+</p>
+</details>
+
+<details>
+<summary>Yetkili olmak için ne yapmalıyım?</summary>
+<p>
+Yetkili alımları açıldığında Discord üzerinden başvuru
+yapabilirsin.
+</p>
+</details>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+<h3>GOLD RP</h3>
+<p>
+Emergency Hamburg üzerinde kaliteli ve düzenli
+roleplay deneyimi oluşturmayı amaçlayan topluluk.
+</p>
+</div>
+
+<div>
+<h3>Hızlı Menü</h3>
+<p><a href="#haberler">Şehir Haberleri</a></p>
+<p><a href="#ceteler">Çeteler</a></p>
+<p><a href="#adalet">Adalet Bakanlığı</a></p>
+<p><a href="#ekip">Yetkili Kadrosu</a></p>
+</div>
+
+<div>
+<h3>Bağlantılar</h3>
+<p>
+<a href="https://discord.gg/qC2tsYEKt" target="_blank">
+Discord
+</a>
+</p>
+
+<p>
+<a href="https://www.instagram.com/eh.goldrp/" target="_blank">
+Instagram
+</a>
+</p>
+
+<p>
+<a href="https://www.roblox.com/games/7711635737/Emergency-Hamburg"
+target="_blank">
+Roblox
+</a>
+</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 GOLD RP • Tüm hakları saklıdır.
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ÜYE MODAL -->
+
+<div class="member-modal" id="memberModal">
+
+<div class="modal-box">
+
+<h2>👥 GOLD RP Üyeleri</h2>
+
+<p>
+Sitede görünmesini istediğin kullanıcı adını yaz.
+</p>
+
+<input
+id="memberName"
+class="input"
+placeholder="Kullanıcı adın">
+
+<button
+class="btn btn-gold"
+onclick="saveMember()">
+Kaydet
+</button>
+
+<button
+class="btn btn-light"
+onclick="closeMembers()">
+Kapat
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ADMIN PANEL -->
+
+<div class="admin-panel" id="adminPanel">
+
+<div class="admin-box">
+
+<div class="admin-head">
+
+<div>
+<h2>⚙️ GOLD RP Yönetim Paneli</h2>
+<p style="color:#746d60;margin-top:5px">
+Site içerik yönetimi
+</p>
+</div>
+
+<button class="btn btn-light"
+onclick="closeAdmin()">
+✕
+</button>
+
+</div>
+
+
+<div id="loginArea">
+
+<div class="admin-note">
+Demo yönetici hesabı: <b>mehmet</b> / <b>1234</b>
+</div>
+
+<input
+id="adminUsername"
+class="input"
+placeholder="Kullanıcı adı">
+
+<input
+id="adminPassword"
+class="input"
+type="password"
+placeholder="Şifre">
+
+<button
+class="btn btn-gold"
+onclick="adminLogin()">
+Yönetici Girişi
+</button>
+
+</div>
+
+
+<div id="adminArea" style="display:none">
+
+<div class="admin-tabs">
+
+<button class="admin-tab"
+onclick="showAdminTab('announcement')">
+📢 Duyuru
+</button>
+
+<button class="admin-tab"
+onclick="showAdminTab('news')">
+📰 Haber
+</button>
+
+<button class="admin-tab"
+onclick="showAdminTab('gang')">
+🕶️ Çete
+</button>
+
+<button class="admin-tab"
+onclick="showAdminTab('justice')">
+⚖️ Adalet
+</button>
+
+<button class="admin-tab"
+onclick="showAdminTab('staff')">
+👥 Ekip
+</button>
+
+</div>
+
+
+<!-- ANNOUNCEMENT -->
+
+<div class="admin-content active"
+id="announcement">
+
+<h3>Yeni Duyuru</h3>
+
+<input
+id="announcementTitle"
+class="input"
+placeholder="Duyuru başlığı">
+
+<textarea
+id="announcementText"
+class="input"
+placeholder="Duyuru içeriği"></textarea>
+
+<button
+class="btn btn-gold"
+onclick="addAnnouncement()">
+Duyuru Yayınla
+</button>
+
+<div class="admin-list"
+id="announcementList"></div>
+
+</div>
+
+
+<!-- NEWS -->
+
+<div class="admin-content"
+id="news">
+
+<h3>Şehir Haberi Ekle</h3>
+
+<input
+id="newsTitle"
+class="input"
+placeholder="Haber başlığı">
+
+<input
+id="newsImage"
+class="input"
+placeholder="Fotoğraf URL'si">
+
+<textarea
+id="newsText"
+class="input"
+placeholder="Haber metni"></textarea>
+
+<button
+class="btn btn-gold"
+onclick="addNews()">
+Haberi Ekle
+</button>
+
+<div class="admin-list"
+id="newsAdminList"></div>
+
+</div>
+
+
+<!-- GANG -->
+
+<div class="admin-content"
+id="gang">
+
+<h3>Çete Ekle</h3>
+
+<input
+id="gangName"
+class="input"
+placeholder="Çete adı">
+
+<input
+id="gangImage"
+class="input"
+placeholder="Fotoğraf URL'si">
+
+<textarea
+id="gangText"
+class="input"
+placeholder="Çete açıklaması"></textarea>
+
+<button
+class="btn btn-gold"
+onclick="addGang()">
+Çete Ekle
+</button>
+
+<div class="admin-list"
+id="gangAdminList"></div>
+
+</div>
+
+
+<!-- JUSTICE -->
+
+<div class="admin-content"
+id="justice">
+
+<h3>Adalet Ekibi Üyesi</h3>
+
+<input
+id="justiceName"
+class="input"
+placeholder="İsim">
+
+<input
+id="justiceRole"
+class="input"
+placeholder="Görevi">
+
+<input
+id="justiceImage"
+class="input"
+placeholder="Fotoğraf URL'si">
+
+<button
+class="btn btn-gold"
+onclick="addJustice()">
+Adalet Ekibine Ekle
+</button>
+
+<div class="admin-list"
+id="justiceAdminList"></div>
+
+</div>
+
+
+<!-- STAFF -->
+
+<div class="admin-content"
+id="staff">
+
+<h3>Yetkili Ekle</h3>
+
+<input
+id="staffName"
+class="input"
+placeholder="İsim">
+
+<input
+id="staffRole"
+class="input"
+placeholder="Görev">
+
+<input
+id="staffImage"
+class="input"
+placeholder="Fotoğraf URL'si">
+
+<button
+class="btn btn-gold"
+onclick="addStaff()">
+Yetkili Ekle
+</button>
+
+<div class="admin-list"
+id="staffAdminList"></div>
+
+</div>
+
+<br>
+
+<button
+class="btn btn-light"
+onclick="adminLogout()">
+Çıkış Yap
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   GOLD RP SITE SYSTEM
+========================= */
+
+const ADMIN_USER = "mehmet";
+const ADMIN_PASS = "1234";
+
+
+/* ADMIN */
+
+function openAdmin(){
+
+    document.getElementById("adminPanel").style.display="block";
+
+}
+
+function closeAdmin(){
+
+    document.getElementById("adminPanel").style.display="none";
+
+}
+
+function adminLogin(){
+
+    const user =
+        document.getElementById("adminUsername").value;
+
+    const pass =
+        document.getElementById("adminPassword").value;
+
+    if(user === ADMIN_USER && pass === ADMIN_PASS){
+
+        document.getElementById("loginArea").style.display="none";
+
+        document.getElementById("adminArea").style.display="block";
+
+        loadAdminData();
+
+    }else{
+
+        alert("Kullanıcı adı veya şifre yanlış!");
+
+    }
+
+}
+
+function adminLogout(){
+
+    document.getElementById("adminArea").style.display="none";
+
+    document.getElementById("loginArea").style.display="block";
+
+}
+
+
+/* ADMIN TABS */
+
+function showAdminTab(id){
+
+    document
+    .querySelectorAll(".admin-content")
+    .forEach(x => x.classList.remove("active"));
+
+    document
+    .getElementById(id)
+    .classList.add("active");
+
+}
+
+
+/* LOCAL DATA */
+
+let announcements =
+    JSON.parse(localStorage.getItem("goldAnnouncements") || "[]");
+
+let news =
+    JSON.parse(localStorage.getItem("goldNews") || "[]");
+
+let gangs =
+    JSON.parse(localStorage.getItem("goldGangs") || "[]");
+
+let justice =
+    JSON.parse(localStorage.getItem("goldJustice") || "[]");
+
+let staff =
+    JSON.parse(localStorage.getItem("goldStaff") || "[]");
+
+
+/* ANNOUNCEMENT */
+
+function addAnnouncement(){
+
+    const title =
+        document.getElementById("announcementTitle").value;
+
+    const text =
+        document.getElementById("announcementText").value;
+
+    if(!title || !text){
+
+        alert("Başlık ve içerik yazmalısın.");
+
+        return;
+
+    }
+
+    announcements.push({
+        title,
+        text,
+        date:new Date().toLocaleDateString("tr-TR")
+    });
+
+    localStorage.setItem(
+        "goldAnnouncements",
+        JSON.stringify(announcements)
+    );
+
+    document.getElementById("announcementTitle").value="";
+    document.getElementById("announcementText").value="";
+
+    renderAnnouncements();
+
+}
+
+
+/* NEWS */
+
+function addNews(){
+
+    const title =
+        document.getElementById("newsTitle").value;
+
+    const image =
+        document.getElementById("newsImage").value;
+
+    const text =
+        document.getElementById("newsText").value;
+
+    if(!title || !text){
+
+        alert("Başlık ve haber metni gerekli.");
+
+        return;
+
+    }
+
+    news.push({
+        title,
+        image,
+        text
+    });
+
+    localStorage.setItem(
+        "goldNews",
+        JSON.stringify(news)
+    );
+
+    document.getElementById("newsTitle").value="";
+    document.getElementById("newsImage").value="";
+    document.getElementById("newsText").value="";
+
+    renderNews();
+
+}
+
+
+/* GANG */
+
+function addGang(){
+
+    const name =
+        document.getElementById("gangName").value;
+
+    const image =
+        document.getElementById("gangImage").value;
+
+    const text =
+        document.getElementById("gangText").value;
+
+    if(!name){
+
+        alert("Çete adı yazmalısın.");
+
+        return;
+
+    }
+
+    gangs.push({
+        name,
+        image,
+        text
+    });
+
+    localStorage.setItem(
+        "goldGangs",
+        JSON.stringify(gangs)
+    );
+
+    document.getElementById("gangName").value="";
+    document.getElementById("gangImage").value="";
+    document.getElementById("gangText").value="";
+
+    renderGangAdmin();
+
+}
+
+
+/* JUSTICE */
+
+function addJustice(){
+
+    const name =
+        document.getElementById("justiceName").value;
+
+    const role =
+        document.getElementById("justiceRole").value;
+
+    const image =
+        document.getElementById("justiceImage").value;
+
+    if(!name || !role){
+
+        alert("İsim ve görev gerekli.");
+
+        return;
+
+    }
+
+    justice.push({
+        name,
+        role,
+        image
+    });
+
+    localStorage.setItem(
+        "goldJustice",
+        JSON.stringify(justice)
+    );
+
+    document.getElementById("justiceName").value="";
+    document.getElementById("justiceRole").value="";
+    document.getElementById("justiceImage").value="";
+
+    renderJustice();
+
+}
+
+
+/* STAFF */
+
+function addStaff(){
+
+    const name =
+        document.getElementById("staffName").value;
+
+    const role =
+        document.getElementById("staffRole").value;
+
+    const image =
+        document.getElementById("staffImage").value;
+
+    if(!name || !role){
+
+        alert("İsim ve görev gerekli.");
+
+        return;
+
+    }
+
+    staff.push({
+        name,
+        role,
+        image
+    });
+
+    localStorage.setItem(
+        "goldStaff",
+        JSON.stringify(staff)
+    );
+
+    document.getElementById("staffName").value="";
+    document.getElementById("staffRole").value="";
+    document.getElementById("staffImage").value="";
+
+    renderStaff();
+
+}
+
+
+/* RENDER ANNOUNCEMENTS */
+
+function renderAnnouncements(){
+
+    const list =
+        document.getElementById("announcementList");
+
+    list.innerHTML="";
+
+    announcements.forEach((x,i)=>{
+
+        const row=document.createElement("div");
+
+        row.className="admin-row";
+
+        row.innerHTML=`
+        <div>
+            <b>${escapeHtml(x.title)}</b>
+            <div style="font-size:12px;color:#777">
+                ${escapeHtml(x.date)}
+            </div>
+        </div>
+
+        <button
+        class="btn btn-light"
+        onclick="deleteAnnouncement(${i})">
+        Sil
+        </button>
+        `;
+
+        list.appendChild(row);
+
+    });
+
+}
+
+
+/* DELETE ANNOUNCEMENT */
+
+function deleteAnnouncement(i){
+
+    announcements.splice(i,1);
+
+    localStorage.setItem(
+        "goldAnnouncements",
+        JSON.stringify(announcements)
+    );
+
+    renderAnnouncements();
+
+}
+
+
+/* RENDER NEWS */
+
+function renderNews(){
+
+    const list =
+        document.getElementById("newsAdminList");
+
+    list.innerHTML="";
+
+    news.forEach((x,i)=>{
+
+        const row=document.createElement("div");
+
+        row.className="admin-row";
+
+        row.innerHTML=`
+        <div>
+            <b>${escapeHtml(x.title)}</b>
+        </div>
+
+        <button
+        class="btn btn-light"
+        onclick="deleteNews(${i})">
+        Sil
+        </button>
+        `;
+
+        list.appendChild(row);
+
+    });
+
+}
+
+
+/* DELETE NEWS */
+
+function deleteNews(i){
+
+    news.splice(i,1);
+
+    localStorage.setItem(
+        "goldNews",
+        JSON.stringify(news)
+    );
+
+    renderNews();
+
+}
+
+
+/* RENDER GANG ADMIN */
+
+function renderGangAdmin(){
+
+    const list =
+        document.getElementById("gangAdminList");
+
+    list.innerHTML="";
+
+    gangs.forEach((x,i)=>{
+
+        const row=document.createElement("div");
+
+        row.className="admin-row";
+
+        row.innerHTML=`
+        <b>${escapeHtml(x.name)}</b>
+
+        <button
+        class="btn btn-light"
+        onclick="deleteGang(${i})">
+        Sil
+        </button>
+        `;
+
+        list.appendChild(row);
+
+    });
+
+}
+
+
+/* DELETE GANG */
+
+function deleteGang(i){
+
+    gangs.splice(i,1);
+
+    localStorage.setItem(
+        "goldGangs",
+        JSON.stringify(gangs)
+    );
+
+    renderGangAdmin();
+
+}
+
+
+/* RENDER JUSTICE */
+
+function renderJustice(){
+
+    const container =
+        document.getElementById("justiceContainer");
+
+    const list =
+        document.getElementById("justiceAdminList");
+
+    container.innerHTML="";
+    list.innerHTML="";
+
+    justice.forEach((x,i)=>{
+
+        const avatar =
+            x.image ||
+            "https://i.pravatar.cc/200?img=12";
+
+        container.innerHTML += `
+        <div class="staff">
+            <img class="avatar" src="${avatar}">
+            <h3>${escapeHtml(x.name)}</h3>
+            <p>${escapeHtml(x.role)}</p>
+        </div>
+        `;
+
+        list.innerHTML += `
+        <div class="admin-row">
+            <b>${escapeHtml(x.name)}</b>
+            <button
+            class="btn btn-light"
+            onclick="deleteJustice(${i})">
+            Sil
+            </button>
+        </div>
+        `;
+
+    });
+
+}
+
+
+/* DELETE JUSTICE */
+
+function deleteJustice(i){
+
+    justice.splice(i,1);
+
+    localStorage.setItem(
+        "goldJustice",
+        JSON.stringify(justice)
+    );
+
+    renderJustice();
+
+}
+
+
+/* RENDER STAFF */
+
+function renderStaff(){
+
+    const container =
+        document.getElementById("staffContainer");
+
+    const list =
+        document.getElementById("staffAdminList");
+
+    container.innerHTML="";
+    list.innerHTML="";
+
+    staff.forEach((x,i)=>{
+
+        const avatar =
+            x.image ||
+            "https://i.pravatar.cc/200?img=12";
+
+        container.innerHTML += `
+        <div class="staff">
+            <img class="avatar" src="${avatar}">
+            <h3>${escapeHtml(x.name)}</h3>
+            <p>${escapeHtml(x.role)}</p>
+        </div>
+        `;
+
+        list.innerHTML += `
+        <div class="admin-row">
+            <b>${escapeHtml(x.name)}</b>
+            <button
+            class="btn btn-light"
+            onclick="deleteStaff(${i})">
+            Sil
+            </button>
+        </div>
+        `;
+
+    });
+
+}
+
+
+/* DELETE STAFF */
+
+function deleteStaff(i){
+
+    staff.splice(i,1);
+
+    localStorage.setItem(
+        "goldStaff",
+        JSON.stringify(staff)
+    );
+
+    renderStaff();
+
+}
+
+
+/* MEMBER */
+
+function openMembers(){
+
+    document.getElementById("memberModal").style.display="flex";
+
+}
+
+function closeMembers(){
+
+    document.getElementById("memberModal").style.display="none";
+
+}
+
+function saveMember(){
+
+    const name =
+        document.getElementById("memberName").value.trim();
+
+    if(!name){
+
+        alert("İsim yazmalısın.");
+
+        return;
+
+    }
+
+    localStorage.setItem(
+        "goldMemberName",
+        name
+    );
+
+    alert("İsmin kaydedildi: " + name);
+
+    closeMembers();
+
+}
+
+
+/* SEARCH-LIKE SAFETY */
+
+function escapeHtml(text){
+
+    return String(text)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+}
+
+
+/* LOAD */
+
+function loadAdminData(){
+
+    renderAnnouncements();
+    renderNews();
+    renderGangAdmin();
+    renderJustice();
+    renderStaff();
+
+}
+
+
+/* START */
+
+loadAdminData();
+
+</script>
+
+</body>
+</html>
